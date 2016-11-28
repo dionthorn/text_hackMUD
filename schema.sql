@@ -1,11 +1,11 @@
-create table reg_users (
+create table user_reg (
     uuid        INTEGER PRIMARY KEY AUTOINCREMENT,
     username    text unique not null,
     password    text not null,
     creation    date not null
 );
 
-create table user_info (
+create table user_nfo (
     uuid        INTEGER PRIMARY KEY AUTOINCREMENT,
     uipa        text unique not null,
     ucre        int not null,

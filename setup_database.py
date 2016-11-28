@@ -16,22 +16,22 @@ if db_is_new:
     conn.executescript(schema)
     print('Inserting Admin data and test user')
     conn.execute("""
-    insert into reg_users (username, password, creation)
+    insert into user_reg (username, password, creation)
     values ('admin', 'root_password', '2016-11-26')
     """)
     conn.execute("""
-    insert into reg_users (username, password, creation)
+    insert into user_reg (username, password, creation)
     values ('test_new_user', 'password1', '2016-11-26')
     """)
     conn.execute("""
-    insert into user_info (uipa, ucre, ucpu, uram, uhdd, ussd, unet, ulog)
+    insert into user_nfo (uipa, ucre, ucpu, uram, uhdd, ussd, unet, ulog)
     values ('256:256:256', 9001, 33, 16, 512, 0, 512, '127.0.0.1:9999')
     """)
     while True:
         try:
             conn.execute("""
-            insert into user_info (uipa, ucre, ucpu, uram, uhdd, ussd, unet, ulog)
-            values ('{}:{}:{}', 9001, 33, 16, 512, 0, 512, '')
+            insert into user_nfo (uipa, ucre, ucpu, uram, uhdd, ussd, unet, ulog)
+            values ('{}:{}:{}', 1000, 33, 16, 512, 0, 512, '')
             """.format(rand(0,255),rand(0,255),rand(0,255)))
             break
         except:
@@ -42,12 +42,12 @@ else:
 
 cursor = conn.cursor()
 
-cursor.execute("""SELECT * FROM reg_users""")
+cursor.execute("""SELECT * FROM user_reg""")
 
 for row in cursor.fetchall():
     print(row)
 
-cursor.execute("""SELECT * FROM user_info""")
+cursor.execute("""SELECT * FROM user_nfo""")
 
 for row in cursor.fetchall():
     print(row)
