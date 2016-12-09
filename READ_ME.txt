@@ -6,6 +6,6 @@ schema.txt is the format for the database, simple.
 use server.py on windows command prompt and wait for it to listen.
 
 use : client.py 127.0.0.1 8888
-in another command promt and the server should show connection.
+in another command prompt and the server should show connection.
 
-client can then send messages with /send
+client can then send messages with /say
