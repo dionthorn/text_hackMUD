@@ -46,15 +46,15 @@ else:
                 print('IP Address Must Be Base 10')
                 sys.exit()
         
-    except:
-        print('Coding Error.')
+    except Exception as e:
+        print(e)
         sys.exit()
 
 SRV_AD = (SRV_IP, SRV_PN) = '127.0.0.1', 5000               # The Game Servers IP and Port Number
 CLI_AD = (CLI_IP, CLI_PN) = sys.argv[1], int(sys.argv[2])   # Clients IP/Port
 BUFF = 1024         # Buffer size
 CHAT = []           # locally stored chat logs
-LOCAL_NAME = ''     # You May Set this to any desired string, or it will be assigned when you /logon
+LOCAL_NAME = ''     # Will be assigned when you /logon
 
 import socket, time, os, msvcrt
 from threading import Thread

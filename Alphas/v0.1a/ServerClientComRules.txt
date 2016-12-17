@@ -1,0 +1,9 @@
+Server Sending Data to Client:
+'/user {username}'	 	= Server is assigning username to Client
+'/say {sender} Said: {message}' = Server is sending chat log from sender with the content of messsage
+	-Sender is either a username or ip:port tuple
+
+Client Sending Data to Server:
+'/exit' 			= Client Local command to disconnect.
+'/say {message}' 		= Client is telling server to broadcast to global chat the content of message
+'/logon {username}:{password}' = Client is attempting server logon as username with password
