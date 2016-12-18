@@ -1,0 +1,7 @@
+create table user_reg (
+    uuid        INTEGER PRIMARY KEY AUTOINCREMENT,
+    username    text unique not null,
+    password    text not null,
+    creation    date not null,
+    llog        text
+);

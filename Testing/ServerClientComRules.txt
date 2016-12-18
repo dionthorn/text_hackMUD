@@ -1,0 +1,14 @@
+Server Sending Data to Client:
+'/user {username}'	 	= Server is assigning username to Client
+'/say {sender} Said: {message}' = Server is sending chat log from sender with the content of messsage
+'/ping {username} Was Pinged: {status}' 		= Server is responding to ping request with status of username
+'/ping You Have Been Pinged By: {username}' 	= Server is informing client that they have been pinged by username
+'/register {username} Already Exists: ERROR' 	= Server is informing client that username already exists in registry
+'/register {username} Already Logged On: ERROR'   = Server is informing client that username exists and is already logged on
+
+Client Sending Data to Server:
+'/exit' 			= Client Local command to disconnect.
+'/say {message}' 		= Client is telling server to broadcast to global chat the content of message
+'/logon {username}:{password}'	= Client is attempting server logon as username with password
+'/ping {username}'		= Client is attempting to check online status of username
+'/register {username}:{password}' = Client is attempting to register a new user as username with password
